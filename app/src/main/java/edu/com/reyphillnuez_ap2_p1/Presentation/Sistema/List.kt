@@ -1,4 +1,7 @@
 package edu.com.reyphillnuez_ap2_p1.Presentation.Sistema
 
-class List {
+import androidx.compose.runtime.Composable
+
+@Composable
+fun List() {
 }
