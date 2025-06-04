@@ -17,7 +17,7 @@ interface TareasDao {
             Tareas where tareaId=:id
         """
     )
-    suspend fun find(id: Int?)
+    suspend fun find(id: Int?) : TareasEntity?
     @Delete
     suspend fun delete(taskEntity: TareasEntity)
     @Query("""select * from tareas""")
