@@ -9,7 +9,7 @@ import edu.com.reyphillnuez_ap2_p1.Data.Local.entities.TareasEntity
     entities =[
         TareasEntity::class
     ],
-    version = 1,
+    version = 2,
     exportSchema = false
 )
 abstract class parcial1: RoomDatabase()
