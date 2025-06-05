@@ -10,6 +10,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import javax.inject.Inject
+import kotlin.concurrent.timerTask
 
 @HiltViewModel
 class ViewModel @Inject constructor(
@@ -88,6 +89,11 @@ class ViewModel @Inject constructor(
                     }
                 } else {
                     tareasRepository.save(_uiState.value.toEntity())
+                    _uiState.update {
+                        it.copy(
+                            guardado = "Se ha guardado correctamente"
+                        )
+                    }
                     new()
                 }
             }
